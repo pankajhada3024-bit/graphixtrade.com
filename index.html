@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>GraphixTrade | Creative Design & Products</title>
+  <title>GraphixTrade | Building Brands Through Creative Design</title>
 
   <!-- SEO -->
-  <meta name="description" content="GraphixTrade is a creative design agency and product brand. We provide logo design, branding, packaging, ads, and sell quality products via Meesho." />
-  <meta name="keywords" content="GraphixTrade, Graphic Design, Branding, Logo Design, Packaging, Products, Meesho" />
+  <meta name="description" content="GraphixTrade is a creative design and branding agency offering logo design, packaging, marketing creatives, and curated quality products." />
+  <meta name="keywords" content="Graphic Design, Branding Agency, Packaging Design, Creative Agency, Products Brand" />
   <meta name="author" content="GraphixTrade" />
 
   <!-- Font -->
@@ -17,8 +17,8 @@
   <style>
     :root {
       --brand: #F5A623;
-      --white: #ffffff;
       --dark: #1a1a1a;
+      --white: #ffffff;
     }
 
     * {
@@ -34,80 +34,60 @@
       line-height: 1.6;
     }
 
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
+    /* ===== HEADER ===== */
+    header {
       background: var(--brand);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      color: var(--white);
+      padding: 40px 20px;
     }
 
-    .logo {
+    .header-container {
+      max-width: 1100px;
+      margin: auto;
       display: flex;
       align-items: center;
-      color: var(--white);
-      font-size: 22px;
-      font-weight: 700;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .logo img {
-      height: 40px;
-      margin-right: 10px;
+      width: 120px;
     }
 
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin-left: 25px;
-      font-weight: 500;
+    .brand-text h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .brand-text p {
+      font-size: 1.1rem;
+      opacity: 0.95;
     }
 
-    /* HERO */
-    .hero {
-      background: var(--brand);
-      color: var(--white);
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    /* SECTIONS */
+    /* ===== SECTION ===== */
     section {
-      padding: 80px 20px;
       max-width: 1100px;
       margin: auto;
+      padding: 60px 20px;
     }
 
     section h2 {
-      font-size: 2.2rem;
       color: var(--brand);
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-bottom: 15px;
     }
 
-    /* SERVICES */
+    section p {
+      max-width: 850px;
+      font-size: 1rem;
+    }
+
+    /* ===== SERVICES ===== */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      gap: 25px;
+      margin-top: 35px;
     }
 
     .service-box {
@@ -117,52 +97,78 @@
       transition: 0.3s;
     }
 
+    .service-box h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
     .service-box:hover {
       background: var(--brand);
       color: var(--white);
     }
 
-    /* PRODUCTS */
+    /* ===== PRODUCTS ===== */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
-      margin-top: 40px;
+      margin-top: 35px;
     }
 
-    .product {
+    .product-card {
       border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: 0.3s;
     }
 
-    .product img {
+    .product-card img {
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
+      height: 220px;
+      object-fit: cover;
     }
 
-    .product a {
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .product-info p {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .buy-btn {
       display: inline-block;
-      margin-top: 10px;
+      padding: 10px 22px;
       background: var(--brand);
       color: var(--white);
-      padding: 10px 20px;
-      border-radius: 25px;
       text-decoration: none;
+      border-radius: 25px;
       font-weight: 600;
+      font-size: 0.9rem;
     }
 
-    /* CTA */
+    /* ===== CTA ===== */
     .cta {
       background: var(--brand);
       color: var(--white);
       text-align: center;
-      padding: 70px 20px;
+      padding: 60px 20px;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
 
     .cta a {
+      display: inline-block;
+      margin-top: 20px;
       background: var(--white);
       color: var(--brand);
       padding: 12px 30px;
@@ -171,102 +177,113 @@
       text-decoration: none;
     }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     footer {
       background: #111;
       color: #ccc;
       text-align: center;
-      padding: 20px;
+      padding: 18px;
       font-size: 0.9rem;
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brand-text h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
+<!-- HEADER -->
+<header>
+  <div class="header-container">
     <div class="logo">
-      <img src="assets/images/Logo1.png" alt="GraphixTrade">
-      Graphixtrade
+      <img src="Logo1.png" alt="GraphixTrade Logo">
     </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#design">Design</a>
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <div class="hero" id="home">
-    <h1>Building Brands & Selling Smart</h1>
-    <p>Creative design services and quality products — powered by GraphixTrade.</p>
+    <div class="brand-text">
+      <h1>GraphixTrade</h1>
+      <p>Building Brands Through Creative Design</p>
+    </div>
   </div>
+</header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About GraphixTrade</h2>
-    <p>
-      GraphixTrade is a creative design and branding agency that also operates as a product-focused brand.
-      We help businesses grow with strong visual identity while selling curated products via Meesho.
-    </p>
-  </section>
+<!-- ABOUT -->
+<section>
+  <h2>About GraphixTrade</h2>
+  <p>
+    GraphixTrade is a creative design and branding agency focused on building strong
+    visual identities and market-ready solutions. Alongside our design services,
+    we develop and present a curated range of quality products shaped by the same
+    creative standards.
+  </p>
+</section>
 
-  <!-- SERVICES -->
-  <section id="design">
-    <h2>Design Services</h2>
-    <div class="services">
-      <div class="service-box">
-        <h3>Logo & Branding</h3>
-        <p>Strong visual identity for your business.</p>
-      </div>
-      <div class="service-box">
-        <h3>Packaging Design</h3>
-        <p>Market-ready packaging that sells.</p>
-      </div>
-      <div class="service-box">
-        <h3>Ads & Marketing</h3>
-        <p>High-converting creatives for Meta Ads.</p>
-      </div>
-      <div class="service-box">
-        <h3>Creative Solutions</h3>
-        <p>Custom designs tailored to your goals.</p>
-      </div>
+<!-- SERVICES -->
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>Logo & Branding</h3>
+      <p>Distinctive brand identities that build trust and recognition.</p>
     </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section id="products">
-    <h2>Our Products</h2>
-    <div class="products">
-
-      <!-- PRODUCT 1 -->
-      <div class="product">
-        <img src="assets/images/product1.jpg" alt="Product 1">
-        <h3>Product Name</h3>
-        <p>₹499</p>
-        <p>Short product description.</p>
-        <a href="https://meesho.com/YOUR-PRODUCT-LINK" target="_blank">Buy on Meesho</a>
-      </div>
-
-      <!-- ADD MORE PRODUCTS SAME WAY -->
-
+    <div class="service-box">
+      <h3>Packaging Design</h3>
+      <p>Professional packaging designed for real market impact.</p>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta" id="contact">
-    <h2>Work With Us</h2>
-    <p>Need design services or want to explore our products?</p>
-    <a href="mailto:info@graphixtrade.com">Contact Us</a>
+    <div class="service-box">
+      <h3>Marketing Creatives</h3>
+      <p>High-performing creatives for ads and promotions.</p>
+    </div>
+    <div class="service-box">
+      <h3>Custom Design</h3>
+      <p>Tailored creative solutions aligned with business goals.</p>
+    </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 GraphixTrade. All rights reserved.
-  </footer>
+<!-- PRODUCTS -->
+<section>
+  <h2>Featured Products</h2>
+  <div class="products">
+    <div class="product-card">
+      <img src="product1.jpg" alt="Product 1">
+      <div class="product-info">
+        <h3>Product Name One</h3>
+        <p>Quality product designed with care and creativity.</p>
+        <a href="#" class="buy-btn" target="_blank">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="product2.jpg" alt="Product 2">
+      <div class="product-info">
+        <h3>Product Name Two</h3>
+        <p>Curated product offering everyday value.</p>
+        <a href="#" class="buy-btn" target="_blank">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Let’s Build Something Valuable</h2>
+  <p>From branding to products, we create value that connects.</p>
+  <a href="mailto:info@graphixtrade.com">Contact Us</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 GraphixTrade. All rights reserved.
+</footer>
 
 </body>
 </html>
-
