@@ -131,7 +131,7 @@ footer {
   letter-spacing: 1px;
 }
 
-/* ================== MOBILE HEADER (FINAL) ================== */
+/* ================= MOBILE HEADER (FINAL & CLEAN) ================= */
 @media (max-width: 768px) {
 
   header {
@@ -185,5 +185,4 @@ footer {
   .nav-links.active {
     display: flex;
   }
-
 }
