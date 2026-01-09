@@ -1,199 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GraphixTrade — Creative Design & Branding</title>
-  <meta name="description" content="GraphixTrade — logos, packaging, marketing ads and business-driven visual solutions." />
-  <meta property="og:title" content="GraphixTrade — Creative Design & Branding" />
-  <meta property="og:description" content="Portfolio of logos, packaging, and branding work." />
-  <link rel="icon" href="assets/img/favicon.ico" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+    <meta charset="UTF-8">
+    <title>GraphixTrade | Creative Digital Agency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #fff;
+        }
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+        }
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 18px;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        h2 {
+            color: #38bdf8;
+        }
+        .services, .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .box {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+        }
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #000;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">
-        <img src="assets/img/logo-black.png" alt="GraphixTrade" class="logo" />
-      </a>
-      <nav class="main-nav" aria-label="Primary">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="projects/project-template.html">Case Studies</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <button id="contact-open" class="contact-cta" aria-controls="slide-contact" aria-expanded="false">Get a Quote</button>
+
+<header>
+    <h1>GraphixTrade</h1>
+    <p>Creative Digital Agency for Modern Brands</p>
+    <a href="#contact" class="btn">Contact Us</a>
+</header>
+
+<section>
+    <h2>About Us</h2>
+    <p>
+        GraphixTrade is a creative digital agency providing branding, website design,
+        and digital marketing solutions for businesses worldwide.
+    </p>
+</section>
+
+<section>
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="box">🎨 Graphic Design</div>
+        <div class="box">💻 Website Design</div>
+        <div class="box">📱 Social Media Marketing</div>
+        <div class="box">🚀 Brand Strategy</div>
     </div>
-  </header>
+</section>
 
-  <main>
-    <!-- HERO + Google Form Embed -->
-    <section class="hero" id="home">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1 class="hero-title">Design that moves brands forward</h1>
-          <p class="hero-sub">Large-scale identity, packaging, and campaigns tailored to business outcomes.</p>
-          <p class="hero-actions">
-            <a class="cta" href="#work">View Work</a>
-            <a class="cta ghost" href="#services">Our Services</a>
-          </p>
-        </div>
-
-        <aside class="hero-form" aria-labelledby="hero-form-title">
-          <h2 id="hero-form-title">Start a project</h2>
-
-          <!-- GOOGLE FORM IFRAME: replace YOUR_FORM_ID with your Google Form ID / embed URL -->
-          <div class="google-form-embed">
-            <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-          </div>
-
-        </aside>
-      </div>
-    </section>
-
-    <!-- Selected Work Grid -->
-    <section id="work" class="work-section">
-      <div class="container">
-        <h2 class="section-title">Selected projects</h2>
-        <div class="portfolio-grid">
-          <article class="portfolio-item">
-            <a class="portfolio-link" href="projects/project-template.html?project=project-1" aria-label="Open project 1 case study">
-              <img src="assets/img/project1-1200.webp" alt="Project 1 — Packaging design" loading="lazy" />
-              <div class="overlay">
-                <h3 class="project-title">Project One</h3>
-                <p class="project-tag">Packaging · Identity</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="portfolio-item">
-            <a class="portfolio-link" href="projects/project-template.html?project=project-2" aria-label="Open project 2 case study">
-              <img src="assets/img/project2-1200.webp" alt="Project 2 — Identity" loading="lazy" />
-              <div class="overlay">
-                <h3 class="project-title">Project Two</h3>
-                <p class="project-tag">Logo · Brand</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="portfolio-item">
-            <a class="portfolio-link" href="projects/project-template.html?project=project-3" aria-label="Open project 3 case study">
-              <img src="assets/img/project3-1200.webp" alt="Project 3 — Campaign" loading="lazy" />
-              <div class="overlay">
-                <h3 class="project-title">Project Three</h3>
-                <p class="project-tag">Campaign · Ads</p>
-              </div>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES / PRICING -->
-    <section id="services" class="services-section">
-      <div class="container">
-        <h2 class="section-title">Services & Packages</h2>
-        <p class="muted">Design packages that fit startups to enterprise-level branding programs.</p>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Identity</h3>
-            <p class="muted">Logo system, color & typography, brand guidelines</p>
-            <p class="price">From $2,500</p>
-            <ul>
-              <li>Primary + secondary logos</li>
-              <li>Brand guidelines (PDF)</li>
-              <li>2 rounds of revisions</li>
-            </ul>
-            <a class="cta small" href="contact.html">Request Identity</a>
-          </div>
-
-          <div class="service-card featured">
-            <h3>Packaging</h3>
-            <p class="muted">Structural & graphic packaging, dielines, mockups</p>
-            <p class="price">From $3,500</p>
-            <ul>
-              <li>3 concept directions</li>
-              <li>Final print-ready files</li>
-              <li>Material & finishing recommendations</li>
-            </ul>
-            <a class="cta small" href="contact.html">Request Packaging</a>
-          </div>
-
-          <div class="service-card">
-            <h3>Campaigns</h3>
-            <p class="muted">Ad concepts, art direction, assets for digital & print</p>
-            <p class="price">From $2,000</p>
-            <ul>
-              <li>Concept & messaging</li>
-              <li>Ad set & templates</li>
-              <li>Production coordination</li>
-            </ul>
-            <a class="cta small" href="contact.html">Request Campaign</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="testimonials-section">
-      <div class="container">
-        <h2 class="section-title">Clients & testimonials</h2>
-        <div class="testimonials-grid">
-          <blockquote class="testimonial">
-            <p>“GraphixTrade transformed our packaging and sales grew 28% in the following quarter.”</p>
-            <footer>— Jane Doe, Head of Marketing, BrandCo</footer>
-          </blockquote>
-          <blockquote class="testimonial">
-            <p>“Fast, creative, and strategic — a rare combination.”</p>
-            <footer>— John Smith, Founder, FreshGoods</footer>
-          </blockquote>
-        </div>
-        <div class="metrics muted">Trusted by 30+ brands • 100+ projects delivered</div>
-      </div>
-    </section>
-
-    <section class="about-cta">
-      <div class="container about-inner">
-        <h2>Ready to start?</h2>
-        <p>Tell us about your project and we’ll reply with timeline and ballpark pricing within 48 hours.</p>
-        <a class="cta" href="contact.html">Contact us</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> GraphixTrade — All rights reserved.</p>
-      <p class="muted">Follow: <a href="#" aria-label="GraphixTrade Instagram">Instagram</a> · <a href="#" aria-label="GraphixTrade Dribbble">Dribbble</a></p>
+<section>
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+        <div class="box">Project One</div>
+        <div class="box">Project Two</div>
+        <div class="box">Project Three</div>
     </div>
-  </footer>
+</section>
 
-  <!-- Slide-out contact panel -->
-  <aside id="slide-contact" class="slide-contact" aria-hidden="true">
-    <button id="slide-close" class="slide-close" aria-label="Close contact form">×</button>
-    <div class="slide-inner">
-      <h3>Start your project</h3>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:pankajhada3024@gmail.com">info@graphixtrade.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/918982548698">Chat on WhatsApp</a></p>
+</section>
 
-      <!-- Embedded Google Form as slide-out (replace YOUR_FORM_ID) -->
-      <div class="google-form-embed">
-        <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      </div>
+<footer>
+    <p>© 2026 GraphixTrade. All Rights Reserved.</p>
+</footer>
 
-    </div>
-  </aside>
-
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lightbox-close" class="lb-close" aria-label="Close">×</button>
-    <img id="lightbox-img" src="" alt="" />
-  </div>
-
-  <script>
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <script src="assets/js/lightbox.js"></script>
-  <script src="assets/js/slideout.js"></script>
 </body>
 </html>
