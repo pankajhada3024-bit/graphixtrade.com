@@ -44,6 +44,11 @@ header {
   gap: 30px;
 }
 
+.nav ul a {
+  color: var(--white);
+  font-weight: 500;
+}
+
 .nav a:hover {
   color: var(--gold);
 }
