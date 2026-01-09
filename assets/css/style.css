@@ -194,3 +194,32 @@ footer {
     display: flex;
   }
 }
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 5px 0;
+  }
+
+  .nav {
+    flex-direction: row;
+    padding: 10px 15px;
+  }
+
+  .brand img {
+    height: 34px;
+  }
+
+  .brand-name {
+    font-size: 17px;
+  }
+
+  .menu-toggle {
+    font-size: 28px;
+  }
+
+  .nav-links {
+    top: 65px; /* IMPORTANT FIX */
+  }
+
+}
