@@ -130,3 +130,29 @@ footer {
   color: var(--white);
   letter-spacing: 1px;
 }
+/* ---------- Mobile Responsive Fix ---------- */
+@media (max-width: 768px) {
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .nav ul {
+    gap: 18px;
+  }
+
+  .nav ul a {
+    font-size: 14px;
+  }
+
+}
