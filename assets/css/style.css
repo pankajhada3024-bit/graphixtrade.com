@@ -176,8 +176,3 @@ footer {
     color: var(--white) !important;
   }
 
-  .nav ul {
-    display: none !important;
-  }
-
-}
