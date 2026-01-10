@@ -176,20 +176,23 @@ footer {
     color: var(--white) !important;
   }
 
-/* ===== WHATSAPP FLOAT BUTTON ===== */
+} /* 👈 CLOSES @media QUERY */
 
+
+/* ===== WHATSAPP FLOAT BUTTON (GLOBAL) ===== */
 .whatsapp-float {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   width: 60px;
   height: 60px;
-  background: red !important;
-  color: white !important;
+  background: #25D366;
+  color: white;
   border-radius: 50%;
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 30px;
-  z-index: 999999 !important;
+  z-index: 99999;
+  text-decoration: none;
 }
