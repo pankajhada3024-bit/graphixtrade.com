@@ -131,6 +131,11 @@ footer {
   letter-spacing: 1px;
 }
 
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+}
+
 /* ===== MOBILE NAV FIX (FINAL) ===== */
 @media (max-width: 768px) {
 
