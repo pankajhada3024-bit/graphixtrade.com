@@ -1,41 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+  const menuToggle = document.getElementById("mobile-menu");
+  const navLinks = document.getElementById("main-nav");
   const navItems = document.querySelectorAll(".nav-links a");
 
-  if (!menuToggle || !navLinks) return;
-
-  // Toggle menu
+  // 1. Toggle Hamburger Menu
   menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
+    
+    // Optional: Prevent body scroll when menu is open
+    if (navLinks.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "initial";
+    }
   });
 
-  // Close menu after clicking a link (mobile)
+  // 2. Close menu when any link is clicked
   navItems.forEach(item => {
     item.addEventListener("click", () => {
       navLinks.classList.remove("active");
+      document.body.style.overflow = "initial";
     });
   });
-});
 
-// Active link on scroll
-const sections = document.querySelectorAll("section");
-const navLinksAll = document.querySelectorAll(".nav-links a");
+  // 3. Active link highlighting on scroll
+  const sections = document.querySelectorAll("section");
+  
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
 
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinksAll.forEach(link => {
-    link.classList.remove("active-link");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active-link");
-    }
+    navItems.forEach(link => {
+      link.classList.remove("active-link");
+      if (link.getAttribute("href").includes(current) && current !== "") {
+        link.classList.add("active-link");
+      }
+    });
   });
 });
