@@ -212,3 +212,18 @@ footer {
 .whatsapp-float:active {
   transform: scale(0.95);
 }
+
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== BUTTON MICRO-ANIMATION ===== */
+.btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
