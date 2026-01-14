@@ -18,6 +18,8 @@ body {
   padding-top: 80px;
 }
 
+/* ================= HEADER ================= */
+
 header {
   position: fixed;
   width: 100%;
@@ -45,18 +47,34 @@ header {
   gap: 30px;
 }
 
-/* Navigation link colors */
-.nav ul a:link,
-.nav ul a:visited {
-  color: var(--white) !important;
+.nav ul a {
+  color: var(--white);
+  text-decoration: none;
 }
 
-.nav ul a:hover,
-.nav ul a:active,
-.nav ul a:focus {
-  color: var(--gold) !important;
+.nav ul a:hover {
+  color: var(--gold);
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
 
 .hero {
   height: 100vh;
@@ -74,6 +92,8 @@ header {
   color: var(--gold);
 }
 
+/* ================= BUTTON ================= */
+
 .btn {
   margin-top: 30px;
   padding: 14px 32px;
@@ -82,12 +102,17 @@ header {
   color: var(--black);
   border-radius: 30px;
   font-weight: bold;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn:hover {
   background: var(--red);
   color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
+
+/* ================= SECTIONS ================= */
 
 section {
   padding: 100px 20px;
@@ -112,6 +137,8 @@ section {
   transform: translateY(-10px);
 }
 
+/* ================= FOOTER ================= */
+
 footer {
   background: #050505;
   text-align: center;
@@ -119,46 +146,18 @@ footer {
   opacity: 0.6;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+/* ================= MOBILE MENU ================= */
 
-.brand-name {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: 1px;
-}
-
-/* Hide hamburger on desktop */
-.menu-toggle {
-  display: none;
-}
-
-/* ===== MOBILE NAV FIX (FINAL) ===== */
 @media (max-width: 768px) {
-
-  .nav {
-    width: 100%;
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 
   .menu-toggle {
     display: block;
-    font-size: 28px;
-    cursor: pointer;
     color: var(--white);
-    z-index: 1100;
   }
 
   .nav-links {
     position: absolute;
-    top: 64px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: #000;
@@ -167,7 +166,7 @@ footer {
     align-items: center;
     gap: 22px;
     padding: 25px 0;
-    z-index: 1050;
+    z-index: 999;
   }
 
   .nav-links.active {
@@ -177,16 +176,17 @@ footer {
   .nav-links li a {
     font-size: 18px;
     padding: 12px 0;
-    color: var(--white) !important;
   }
+}
 
-/* ===== WHATSAPP FLOAT BUTTON (FINAL) ===== */
+/* ================= WHATSAPP BUTTON ================= */
+
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
@@ -194,36 +194,15 @@ footer {
   justify-content: center;
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
   z-index: 9999;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .whatsapp-float img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
 }
 
-/* Hover animation (desktop) */
 .whatsapp-float:hover {
-  transform: scale(1.1) translateY(-3px);
-  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+  transform: scale(1.1);
 }
 
-/* Tap feedback (mobile) */
-.whatsapp-float:active {
-  transform: scale(0.95);
-}
-
-/* ===== SMOOTH SCROLL ===== */
-html {
-  scroll-behavior: smooth;
-}
-
-/* ===== BUTTON MICRO-ANIMATION ===== */
-.btn {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-}
+/* ========*
