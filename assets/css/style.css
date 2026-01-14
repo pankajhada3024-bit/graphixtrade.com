@@ -153,6 +153,12 @@ footer {
   .menu-toggle {
     display: block;
     color: var(--white);
+    position: relative;
+    z-index: 1100;
+  }
+
+  .nav {
+    position: relative;
   }
 
   .nav-links {
