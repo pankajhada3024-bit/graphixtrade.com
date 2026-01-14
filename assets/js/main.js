@@ -3,19 +3,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelector(".nav-links");
   const navItems = document.querySelectorAll(".nav-links a");
 
-  // Toggle menu open/close
+  if (!menuToggle || !navLinks) return;
+
+  // Toggle menu
   menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
   });
 
-  // Auto close menu when a link is clicked (mobile)
-  navItems.forEach(function (item) {
-    item.addEventListener("click", function () {
+  // Close menu after clicking a link (mobile)
+  navItems.forEach(item => {
+    item.addEventListener("click", () => {
       navLinks.classList.remove("active");
     });
   });
 });
-// ===== ACTIVE NAV LINK ON SCROLL =====
+
+// Active link on scroll
 const sections = document.querySelectorAll("section");
 const navLinksAll = document.querySelectorAll(".nav-links a");
 
