@@ -1,1 +1,23 @@
+document.querySelectorAll(".product-slider").forEach(slider => {
+  const images = slider.querySelectorAll("img");
+  const prev = slider.querySelector(".prev");
+  const next = slider.querySelector(".next");
+
+  let index = 0;
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove("active"));
+    images[i].classList.add("active");
+  }
+
+  prev.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  });
+
+  next.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    showImage(index);
+  });
+});
 
