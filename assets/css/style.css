@@ -300,3 +300,96 @@ footer {
 .whatsapp-float img {
   width: 30px;
 }
+
+/* ================= PRODUCTS PAGE ================= */
+
+.page-hero {
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: clamp(32px, 6vw, 50px);
+}
+
+.page-hero span {
+  color: var(--gold);
+}
+
+.page-hero p {
+  max-width: 700px;
+  margin: 15px auto 0;
+  opacity: 0.85;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  padding: 40px 20px 100px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+/* SLIDER */
+.product-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  height: 280px;
+}
+
+.product-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.product-slider img.active {
+  display: block;
+}
+
+/* SLIDER BUTTONS */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slide-btn.prev { left: 10px; }
+.slide-btn.next { right: 10px; }
+
+.product-card h3 {
+  margin: 18px 0 6px;
+}
+
+.price {
+  color: var(--gold);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
+
+.buy-btn {
+  display: inline-block;
+}
