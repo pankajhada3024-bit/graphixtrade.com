@@ -1,20 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("mobile-menu");
-  const navLinks = document.getElementById("main-nav");
+document.addEventListener("DOMContentLoaded",()=>{
+  const menu=document.getElementById("mobile-menu");
+  const nav=document.getElementById("main-nav");
+  if(!menu || !nav) return;
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-
-    // Lock background scroll
-    document.body.style.overflow =
-      navLinks.classList.contains("active") ? "hidden" : "auto";
+  menu.addEventListener("click",()=>{
+    nav.classList.toggle("active");
+    document.body.style.overflow=
+      nav.classList.contains("active")?"hidden":"auto";
   });
 
-  // Close menu when link clicked
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      document.body.style.overflow = "auto";
+  document.querySelectorAll(".nav-links a").forEach(link=>{
+    link.addEventListener("click",()=>{
+      nav.classList.remove("active");
+      document.body.style.overflow="auto";
     });
   });
 });
