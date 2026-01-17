@@ -232,3 +232,7 @@ footer {
   padding: 8px 18px;
   font-size: 13px;
 }
+
+.nav-links a.active {
+  color: var(--gold);
+}
