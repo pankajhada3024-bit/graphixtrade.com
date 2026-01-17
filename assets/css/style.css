@@ -191,3 +191,40 @@ footer {
   justify-content:center;
 }
 .whatsapp-float img{width:30px;}
+
+/* ================= PORTFOLIO PAGE ================= */
+
+.portfolio-page {
+  padding-top: 40px;
+}
+
+.portfolio-category {
+  margin-bottom: 90px;
+}
+
+.portfolio-category h2 {
+  margin-bottom: 10px;
+}
+
+.category-desc {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.75;
+  font-size: 15px;
+}
+
+/* Price + designer text */
+.portfolio-overlay p {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.portfolio-overlay small {
+  opacity: 0.8;
+}
+
+/* Button inside overlay */
+.portfolio-overlay .btn {
+  padding: 8px 18px;
+  font-size: 13px;
+}
