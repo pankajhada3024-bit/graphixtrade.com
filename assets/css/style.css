@@ -239,26 +239,6 @@ section h2 span {
   opacity: 1;
 }
 
-/* Always show overlay on mobile */
-@media (max-width: 768px) {
-  .portfolio-overlay {
-    opacity: 1;
-    background: rgba(0,0,0,0.55);
-  }
-
-  .portfolio-card img {
-    height: 220px;
-  }
-
-  .portfolio-category {
-    margin-bottom: 60px;
-  }
-
-  .category-desc {
-    font-size: 14px;
-  }
-}
-
 /* ================= CONTACT ================= */
 form {
   max-width: 500px;
@@ -392,4 +372,26 @@ footer {
 
 .buy-btn {
   display: inline-block;
+}
+
+
+/* Always show overlay on mobile */
+@media (max-width: 768px) {
+  .portfolio-overlay {
+    opacity: 1;
+    background: rgba(0,0,0,0.55);
+  }
+
+  .portfolio-card img {
+    height: 220px;
+  }
+
+  .portfolio-category {
+    margin-bottom: 60px;
+  }
+
+  .category-desc {
+    font-size: 14px;
+  }
+  
 }
