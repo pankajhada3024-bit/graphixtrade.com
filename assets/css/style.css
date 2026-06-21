@@ -17,7 +17,7 @@ body {
   font-family: Arial, sans-serif;
   background: var(--black);
   color: var(--white);
-  padding-top: 0px;
+  padding-top: 80px;
   overflow-x: hidden;
 }
 
@@ -545,5 +545,35 @@ footer {
   .floating-icon{
       width:60px;
   }
+/* ================= OFFER BAR ================= */
+
+.offer-bar{
+    position:fixed;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#f5bb1f;
+    color:#000;
+    overflow:hidden;
+    z-index:999;
+    border-bottom:1px solid rgba(0,0,0,.15);
+}
+
+.offer-track{
+    white-space:nowrap;
+    font-size:14px;
+    font-weight:700;
+    padding:8px 0;
+    animation:marquee 18s linear infinite;
+}
+
+@keyframes marquee{
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
 
 }
