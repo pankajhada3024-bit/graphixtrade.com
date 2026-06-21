@@ -63,10 +63,7 @@
 
         <div class="hero-right">
 
-            <img
-                src="assets/images/graphixtrade white.json"
-                class="hero-logo"
-                alt="GraphixTrade Animated Logo">
+            <div id="lottie-logo" class="hero-logo"></div>
 
             <img src="assets/images/pen-tool.png"
                  class="floating-icon icon-1"
@@ -250,5 +247,19 @@
 </a>
 
 <script src="assets/js/main.js"></script>
-</body>
-</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    lottie.loadAnimation({
+        container: document.getElementById("lottie-logo"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "assets/images/graphixtrade-logo.json"
+    });
+
+});
+</script>
