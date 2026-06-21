@@ -17,7 +17,7 @@ body {
   font-family: Arial, sans-serif;
   background: var(--black);
   color: var(--white);
-  padding-top: 80px;
+  padding-top: 110px;
   overflow-x: hidden;
 }
 
@@ -26,8 +26,14 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.95);
+  background: rgba(0,0,0,0.96);
   z-index: 1000;
+
+  border-bottom: 1px solid rgba(245,187,31,0.25);
+
+  box-shadow:
+  0 2px 15px rgba(245,187,31,0.12),
+  0 0 30px rgba(245,187,31,0.05);
 }
 
 .nav {
@@ -542,11 +548,13 @@ footer {
       font-size:15px;
   }
 
-  .floating-icon{
-      width:60px;
-  }
-/* ================= OFFER BAR ================= */
+ .floating-icon{
+    width:60px;
+}
 
+}   /* <-- CLOSE THE MOBILE MEDIA QUERY HERE */
+
+/* ================= OFFER BAR ================= */
 .offer-bar{
     position:fixed;
     top:70px;
