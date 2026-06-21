@@ -168,12 +168,15 @@ header {
 }
 
 .hero-logo{
-    width:420px;
-    max-width:90%;
-    z-index:5;
+    width:500px;
+    height:500px;
+    position:relative;
+    z-index:2;
+
     filter:
-        drop-shadow(0 0 20px rgba(212,154,0,.35))
-        drop-shadow(0 0 50px rgba(212,154,0,.25));
+    drop-shadow(0 0 20px rgba(245,184,28,.35))
+    drop-shadow(0 0 50px rgba(245,184,28,.25))
+    drop-shadow(0 0 100px rgba(245,184,28,.15));
 }
 
 .hero h1 {
