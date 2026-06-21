@@ -184,6 +184,59 @@ header {
   color: var(--gold);
 }
 
+/* ================= FLOATING ICONS ================= */
+
+.floating-icon{
+    position:absolute;
+    width:90px;
+    opacity:.18;
+    z-index:2;
+}
+
+.icon-1{
+    top:15%;
+    left:10%;
+    animation:float1 6s ease-in-out infinite;
+}
+
+.icon-2{
+    bottom:18%;
+    left:20%;
+    animation:float2 8s ease-in-out infinite;
+}
+
+.icon-3{
+    top:20%;
+    right:10%;
+    animation:float3 7s ease-in-out infinite;
+}
+
+@keyframes float1{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+@keyframes float2{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(25px);
+    }
+}
+
+@keyframes float3{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
 /* ================= BUTTON ================= */
 .btn {
   display: inline-block;
@@ -437,6 +490,7 @@ footer {
 
 /* Always show overlay on mobile */
 @media (max-width: 768px) {
+
   .portfolio-overlay {
     opacity: 1;
     background: rgba(0,0,0,0.55);
@@ -453,5 +507,40 @@ footer {
   .category-desc {
     font-size: 14px;
   }
-  
+
+  /* ================= HERO MOBILE ================= */
+
+  .hero-content{
+      flex-direction:column;
+      text-align:center;
+  }
+
+  .hero-left{
+      order:2;
+  }
+
+  .hero-right{
+      order:1;
+  }
+
+  .hero-logo{
+      width:260px;
+  }
+
+  .hero-left h1{
+      font-size:42px;
+  }
+
+  .hero-text{
+      font-size:18px;
+  }
+
+  .hero-services{
+      font-size:15px;
+  }
+
+  .floating-icon{
+      width:60px;
+  }
+
 }
