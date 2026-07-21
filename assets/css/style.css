@@ -520,35 +520,57 @@ footer {
   /* ================= HERO MOBILE ================= */
 
   .hero-content{
-      flex-direction:column;
-      text-align:center;
-  }
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:15px;
+}
 
-  .hero-left{
-      order:2;
-  }
+.hero-left{
+    order:1;
+}
 
-  .hero-right{
-      order:1;
-  }
+.hero-right{
+    order:2;
+}
 
-  .hero-logo{
-      width:260px;
-  }
+.hero-title{
+    font-size:34px;
+    margin-bottom:10px;
+}
 
-  .hero-left h1{
-      font-size:42px;
-  }
+.hero-logo{
+    width:260px;
+    height:260px;
+    margin:auto;
+}
 
-  .hero-text{
-      font-size:18px;
-  }
+.hero-text{
+    font-size:18px;
+    line-height:1.6;
+    max-width:320px;
+    margin-top:10px;
+}
 
-  .hero-services{
-      font-size:15px;
-  }
+.hero-services{
+    margin-top:18px;
+    font-size:15px;
+    line-height:1.8;
+    color:#d6d6d6;
+    max-width:320px;
+}
 
- .floating-icon{
+.swipe-hint{
+    margin-top:30px;
+    font-size:14px;
+    letter-spacing:1px;
+    color:#f5bb1f;
+    animation:bounce 2s infinite;
+}
+
+.floating-icon{
     width:60px;
 }
 
