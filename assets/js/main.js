@@ -1,18 +1,1 @@
-document.addEventListener("DOMContentLoaded",()=>{
-  const menu=document.getElementById("mobile-menu");
-  const nav=document.getElementById("main-nav");
-  if(!menu || !nav) return;
-
-  menu.addEventListener("click",()=>{
-    nav.classList.toggle("active");
-    document.body.style.overflow=
-      nav.classList.contains("active")?"hidden":"auto";
-  });
-
-  document.querySelectorAll(".nav-links a").forEach(link=>{
-    link.addEventListener("click",()=>{
-      nav.classList.remove("active");
-      document.body.style.overflow="auto";
-    });
-  });
-});
+document.addEventListener("DOMContentLoaded",()=>{const toggle=document.querySelector(".menu-toggle"),nav=document.querySelector(".nav-links");if(toggle&&nav){toggle.addEventListener("click",()=>{const open=nav.classList.toggle("active");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"×":"☰";});nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("active");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰";}));}const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;document.querySelectorAll("[data-autoscroll]").forEach(rail=>{if(reduce)return;let timer;const advance=()=>{const card=rail.firstElementChild;if(!card)return;const amount=card.getBoundingClientRect().width+16;const atEnd=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-4;rail.scrollTo({left:atEnd?0:rail.scrollLeft+amount,behavior:"smooth"});};const start=()=>timer=window.setInterval(advance,4500);const stop=()=>window.clearInterval(timer);rail.addEventListener("mouseenter",stop);rail.addEventListener("mouseleave",start);rail.addEventListener("touchstart",stop,{passive:true});rail.addEventListener("touchend",start,{passive:true});start();});const observer="IntersectionObserver"in window?new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}}),{threshold:.12}):null;document.querySelectorAll(".reveal").forEach(el=>observer?observer.observe(el):el.classList.add("visible"));document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>{const filter=button.dataset.filter;document.querySelectorAll(".filter").forEach(item=>item.classList.toggle("active",item===button));document.querySelectorAll(".portfolio-item").forEach(item=>item.classList.toggle("hidden",filter!=="all"&&item.dataset.category!==filter));}));const form=document.querySelector("#contact-form");if(form)form.addEventListener("submit",event=>{event.preventDefault();const data=new FormData(form);const message=`Hi GraphixTrade, I would like to discuss a project.%0A%0AName: ${encodeURIComponent(data.get("name"))}%0ABusiness: ${encodeURIComponent(data.get("business")||"Not specified")}%0AService: ${encodeURIComponent(data.get("service"))}%0ADetails: ${encodeURIComponent(data.get("message"))}`;window.open(`https://wa.me/918982548698?text=${message}`,"_blank","noopener");});});
